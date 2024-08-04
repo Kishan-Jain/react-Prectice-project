@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useRef, useCallback, useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -26,6 +26,9 @@ function App() {
   }
   ,[passwordLength, numberAllow, characterAllow, specialCharectorAllow])
   
+  const copyPassword = useCallback(() => {
+      window.navigator.clipboard.writeText(password)
+  }, [password])
 
   useEffect(()=>{
     passwordGenrator()
@@ -38,19 +41,31 @@ function App() {
     py-10 text-5xl font-serif font-semibold mx-auto text-center bg-yellow-100 text-yellow-800
     '>Custom Password Genrator</h1>
     <div className='p-5 border-2 border-yellow-50'>
-      <div className='w-full max-w-md mx-auto p-10 border-2 border-yellow-50'>
-        <div className=''>
-              {password}
+      <div className='w-full max-w-xl mx-auto p-10 border-4 rounded-xl border-yellow-50'>
+        <div className='border-2 rounded-xl w-full'>
+          <input 
+          type="text"
+          className="overflow-scroll w-10/12 p-2 bg-orange-100 "
+          value={password}
+          name='password'
+          readOnly
+           />
+          <button 
+          type="button"
+          onClick={copyPassword}
+          className='
+          inline-flex justify-center w-2/12 bg-orange-300 py-2 border-l-0 rounded-r-xl font-extrabold
+           hover:bg-orange-400 hover:text-gray-700'
+          >Copy</button>
         </div>
         <div className=''>
         <div className=''>
               <input type="range"
               className='cursor-pointer'
               value={passwordLength}
-              min={4}
-              max={48}
+              min={8}
+              max={36}
               onChange={(e) => {setPasswordLength(e.target.value)}}
-
               />
               <label> Length : {passwordLength}</label>
         </div>
