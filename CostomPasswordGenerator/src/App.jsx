@@ -76,7 +76,7 @@ function App() {
           defaultChecked={characterAllow}
           onChange={() => {setCharacterAllow((prev) => !prev)}}
           />
-          <label htmlFor='numberInput'> Charector </label>
+          <label htmlFor='charectorInput'> Charector </label>
         </div>
         <div className="">
           <input type="checkbox" 
