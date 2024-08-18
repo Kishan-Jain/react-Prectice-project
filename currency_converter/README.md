@@ -1,8 +1,40 @@
-# React + Vite
+<!--
+Currency converter application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+objective
+key features
+use skills
+functionalities
+workFlow
+ -->
 
-Currently, two official plugins are available:
+# Currency Converter Application
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Objective :
+
+> Convert any currency with by using External currency details Api
+
+## Key features :
+
+> #### Fatch currency Data by external Api
+
+In project I use external Api for onDate currency dynamic and real data and store in variable with using fatch request
+
+> #### Select any currency
+ Use list of currencies by receive api data
+
+> #### Automatic converter currency
+ Automatic convert currency when updated
+
+## Use skills :
+This program dedicted project with reactJs functionalities with fatch Api
+> #### * ReactJs with vite <br> * use fatch Api
+
+## Functionalies : 
+** select currency by list<br/>
+** calculate currency value<br />
+** swap currencies
+
+## Work Flow :
+
+> #### firstly use External Api to get currencies details <br /> use currencies name for selecting options <br /> select currency and given value <br /> calculate the currency valeu and return 
